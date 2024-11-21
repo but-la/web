@@ -1,0 +1,27 @@
+/github/workspace/deployment/configs/dev.yaml
+address: ":8080"
+store:
+  datastore:
+    env: DATASTORE
+host:
+  scheme: "https"
+  hostname: "dev.but.la"
+
+```
+```markdown
+/github/workspace/deployment/configs/README.md
+# Configurations for Development Environment
+
+This configuration file specifies the settings used when running the application in a development environment.
+
+## Configuration keys and description:
+
+- `address`: The network address that the server listens on, which is port 8080 on all interfaces in this case.
+- `store`: Configuration settings related to data storage.
+  - `datastore`: Settings for the datastore to be used.
+    - `env`: The name of the environment variable that contains the datastore's configuration, which is "DATASTORE" here.
+- `host`: Configuration for the hostname.
+  - `scheme`: The protocol scheme used for the URL, which is "https" here.
+  - `hostname`: The fully qualified domain name where the development server can be accessed, e.g., "dev.but.la".
+
+Make sure to provide a valid `DATASTORE` environment variable that the application can use to connect to the appropriate datastore instance.
